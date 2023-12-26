@@ -1,0 +1,292 @@
+.headerMobile{
+    display: none;
+}
+.closeMenu☰{
+    display: none;
+}
+.curriculoMediaQuery{
+    display: none;
+    grid-area: curriculo;
+}
+.closeMenuX{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2px;
+    background-color: black;
+    
+    
+}
+#ckeckCloseMenu{
+    display: none;
+}
+
+
+#ckeckCloseMenu:checked ~ .headerMobile{
+    background-color: var(--bg-primery);
+    color: black;
+}
+#darkModeNav:checked ~ .headerMobile{
+    background-color: rgb(230, 230, 230);
+    color: black;
+ }
+#darkModeNav:checked ~ .headerMobile .closeMenuX{
+    color: var(--bg-primery);
+    font-weight: 800;
+ }
+ #darkModeNav:checked ~ .headerMobile h1{
+    color: black;
+}
+@media(max-width: 768px){
+    .containerContatos{
+        justify-content: center;
+        gap: 50px;
+    }
+    .containerContatos img{
+        width: 80px;
+        height: 80px;
+    }
+    .email, .telefone, .linkedin, .github{
+        width: 5%;
+    }
+}
+@media (max-width: 425px){
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .container{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "apresentacao"
+        "curriculo"
+        "contatos"
+        "sobreMim"
+        "projetos"
+        "habilidades"
+        ;
+        
+        
+    }
+    .headerMobile{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2%;
+        border-bottom: 2px solid var(--text-light);
+        position: fixed;
+        top: 0;
+        z-index: 3;
+        background-color: var(--bg-primery);
+        width: 100%;
+        
+        
+    }
+    #ckeckCloseMenu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 4;
+    }
+    .buttonDarkMode{
+        width: 2.5em;
+        height: 1.3em;
+    }
+    .btnCheck{
+        width: 12px;
+        height: 12px;
+    }
+    #darkModeNav:checked ~ .headerMobile .buttonDarkMode .btnCheck{
+        margin-left: 60%;
+    }
+    
+    .apresentacao{
+        flex-direction: column-reverse;
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 2em;
+        text-align: left;
+        font-size: 14px;
+        padding-top: 12em;
+    }
+    .apresentacao p{
+        font-size: 16px;
+        color: grey;
+    }
+    .fotoPerfil{
+        width: 250px;
+        height: 250px;
+        border-radius: 5%;
+        content: url("/img/perfil\ do\ portfolio.png");
+    }
+    
+    .descricao{
+        line-height: 25px;
+    }
+    .sobreMim{
+        width: 65%;
+        padding-top: 18em;
+        margin-bottom: 14em;
+    }
+    .sobreMim p{
+        font-size: 14px;
+        letter-spacing: 0px;
+        text-align: center;
+    }
+    .habilidades{
+        width: 80%;
+        padding-top: 10em;
+        margin-top: 14em;
+    }
+    .box{
+        width: 40%;
+        gap: 10px;
+        border-radius: 4px;
+        padding: 30px 0 30px 0;
+        margin-top: 0;
+    }
+    .containerHabilidades{
+        margin-top: 30px;
+        margin-bottom: 10rem;
+        gap: 20px;
+    }
+    .habilidades img{
+        width: 50%;
+        
+    }
+    .contatos{
+        margin: 0 auto;
+        padding-top: 0;
+        margin-top: 0;
+        width: 80%;
+        
+    }
+    .contatos h2{
+        display: none;
+    }
+
+    .containerContatos{
+        justify-content: center;
+        gap: 4px;
+        margin-top: 10px;
+        width: 100%;
+        margin-bottom: 0;
+        
+    }
+    .link{
+        width: 20px;
+        height: 20px;
+        padding: 30px;
+    }
+
+
+    .containerContatos img{
+        width: 30px;
+        height: 30px;
+        margin-bottom: 0;
+        
+    }
+
+    .projetos{
+        margin-top: 10em;
+        padding-top: 6em;
+        margin-bottom: 10em;
+    }
+    .containerProjetos{
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        border-radius: 8px;
+    }
+    .boxProjetos{
+        width: 8em;
+        height: 10em;
+        object-fit: cover;
+    }
+    .action{
+        display: none;
+    }
+    .curriculoMediaQuery{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .btnCurriculo{
+        width: 250px;
+        height: 3em;
+        transition: 200ms;
+        border-radius: 4px;
+    }
+    
+    /* menu Mobile */
+    nav, nav ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        bottom: 0;
+        height: auto;
+        flex-direction: column;
+        z-index: 1;
+    }
+    nav{
+        background-color: var(--bg-primery);
+        padding: 0;
+        border: none;
+    }
+    nav .buttonDarkMode{
+        display: none;
+    }
+    .nav-itens a{
+        font-size: 20px;
+        color: var(--subtitle-color);
+    }
+    .links{
+        margin-top: -400px;
+    }
+    .logo{
+        margin-top: -100px;
+        font-size: 30px;
+    }
+    .ckeckContatos{
+        display: none;
+    }
+    #ckeckCloseMenu:checked ~ nav{
+        display: none;
+    }
+    #ckeckCloseMenu:checked ~ .headerMobile{
+        color: var(--text-light);
+    }
+    #ckeckCloseMenu:checked ~ .headerMobile .closeMenuX{
+        display: none;
+        
+        
+    }
+    .closeMenuX{
+        color: var(--bg-primery);
+        background-color: var(--text-light);
+    }
+    h1{
+        color: white;
+    }
+    #ckeckCloseMenu:checked ~ .headerMobile .closeMenu☰{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 2px;
+        background-color: black;
+        
+
+    }
+    
+    
+    /* menu Mobile */
+}
+
+
